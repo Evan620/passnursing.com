@@ -29,7 +29,7 @@ const Navbar = () => {
                 <Stethoscope className="h-6 w-6 text-white" />
               </div>
               <span className="font-heading font-bold text-xl text-gray-800">
-                Nursing Exams Pros
+                passnursing.com
               </span>
             </Link>
 

@@ -17,7 +17,7 @@ const Services = () => {
     {
       icon: BookOpen,
       title: 'Online Exams Help',
-      description: 'Comprehensive support for nursing exams and quizzes with expert guidance.',
+  description: 'Comprehensive support for nursing exams and quizzes with expert guidance from passnursing.com.',
       features: [
         'Exam preparation strategies',
         'Quiz assistance and practice',
@@ -61,7 +61,7 @@ const Services = () => {
     {
       icon: FileText,
       title: 'Essay & Research Paper Writing',
-      description: 'Specialized research and academic writing services for nursing students.',
+  description: 'Specialized research and academic writing services for nursing students at passnursing.com.',
       features: [
         'Literature reviews',
         'Case study analysis',
@@ -83,7 +83,7 @@ const Services = () => {
     {
       icon: GraduationCap,
       title: 'Online Class Help',
-      description: 'Guidance and support for online nursing courses and virtual learning.',
+  description: 'Guidance and support for online nursing courses and virtual learning at passnursing.com.',
       features: [
         'Discussion post assistance',
         'Virtual presentation support',
@@ -141,7 +141,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive academic support designed specifically for nursing students. 
+              Comprehensive academic support designed specifically for nursing students at passnursing.com. 
               From exam preparation to assignment assistance, we're here to help you succeed.
             </p>
           </motion.div>
@@ -237,7 +237,7 @@ const Services = () => {
                           {service.title}
                         </h3>
                         <p className="text-gray-600">
-                          Professional nursing education support
+                          Professional nursing education support at passnursing.com
                         </p>
                       </div>
                     </div>
@@ -264,7 +264,7 @@ const Services = () => {
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
               Choose the service that best fits your needs and take the first step 
-              toward academic success in your nursing journey.
+              toward academic success in your passnursing.com journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-accent">

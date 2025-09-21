@@ -30,7 +30,7 @@ const Footer = () => {
                 <Stethoscope className="h-6 w-6 text-white" />
               </div>
               <span className="font-heading font-bold text-xl">
-                Nursing Exams Pros
+                passnursing.com
               </span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">

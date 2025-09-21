@@ -14,19 +14,19 @@ const ServicesSection = () => {
     {
       icon: BookOpen,
       title: 'Online Exams Help',
-      description: 'Support for nursing exams & quizzes with expert guidance and comprehensive preparation strategies.',
+  description: 'Support for nursing exams & quizzes with expert guidance and comprehensive preparation strategies from passnursing.com.',
       features: ['Exam preparation', 'Quiz assistance', 'Study strategies', 'Test-taking tips']
     },
     {
       icon: PenTool,
       title: 'Homework & Assignment Help',
-      description: 'Essays, projects, and written tasks completed with nursing expertise and academic excellence.',
+  description: 'Essays, projects, and written tasks completed with nursing expertise and academic excellence at passnursing.com.',
       features: ['Essay writing', 'Project completion', 'Research assistance', 'Academic formatting']
     },
     {
       icon: FileText,
       title: 'Essay & Research Paper Writing',
-      description: 'Research, formatting, and academic writing services tailored for nursing students.',
+  description: 'Research, formatting, and academic writing services tailored for nursing students at passnursing.com.',
       features: ['Research papers', 'Literature reviews', 'Case studies', 'APA formatting']
     },
     {
@@ -78,7 +78,7 @@ const ServicesSection = () => {
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive academic support designed specifically for nursing students. 
+            Comprehensive academic support designed specifically for nursing students at passnursing.com. 
             From exam preparation to assignment assistance, we're here to help you succeed.
           </p>
         </motion.div>
@@ -129,27 +129,6 @@ const ServicesSection = () => {
           })}
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-primary rounded-2xl p-8 md:p-12 text-white">
-            <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join hundreds of nursing students who have achieved their academic goals 
-              with our personalized support services.
-            </p>
-            <button className="btn-accent text-lg px-8 py-4">
-              Request Service Now
-            </button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

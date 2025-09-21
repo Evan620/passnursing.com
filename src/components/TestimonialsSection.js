@@ -3,52 +3,29 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const TestimonialsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials = [
-    {
-      name: 'Adam Gillworm',
-      role: 'Nursing Student',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
-      content: 'Community and Public Health Nursing came alive for me through Nursing Exams Pros. Their interactive approach, combined with real-life case studies, transformed theoretical knowledge into tangible skills.',
-      rating: 5
-    },
-    {
-      name: 'Lilly Wilgorm',
-      role: 'Nursing Student',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
-      content: 'Ethics in nursing and Leadership and Management are critical skills. Nursing Exams Pros not only taught me the theoretical aspects but also provided practical insights.',
-      rating: 5
-    },
-    {
-      name: 'William Rush',
-      role: 'Nursing Prerequisites Student',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
-      content: 'Navigating nursing school prerequisites was daunting, but Nursing Exams Pros made it manageable. The comprehensive approach to subjects like Anatomy, Physiology, and Microbiology gave me a solid foundation.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'RN Student',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
-      content: 'The support I received for Pharmacology and MedSurg was incredible. Complex concepts became clear through their step-by-step explanations and practical examples.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'BSN Student',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
-      content: 'Nursing Exams Pros helped me excel in my online classes. Their tutors are knowledgeable, patient, and truly care about student success.',
-      rating: 5
-    }
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // Placeholder WhatsApp screenshot images, replace with your actual paths
+  const whatsappScreenshots = [
+    require('../assets/images/WhatsApp-Image-2023-09-06-at-19.25.10.jpg'),
+    require('../assets/images/WhatsApp-Image-2023-09-06-at-19.25.15.jpg'),
+    require('../assets/images/WhatsApp-Image-2023-09-06-at-19.28.45.jpg'),
   ];
 
+  // Auto-advance every 5 seconds
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % whatsappScreenshots.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [whatsappScreenshots.length]);
+
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => (prev + 1) % whatsappScreenshots.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prev) => (prev - 1 + whatsappScreenshots.length) % whatsappScreenshots.length);
   };
 
   const goToTestimonial = (index) => {
@@ -74,7 +51,8 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <div className="relative max-w-4xl mx-auto">
+
+        <div className="relative max-w-2xl mx-auto">
           <div className="overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
@@ -83,42 +61,14 @@ const TestimonialsSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
-                className="text-center"
+                className="flex justify-center items-center min-h-[350px]"
               >
-                <div className="bg-background rounded-2xl p-8 md:p-12 shadow-lg">
-                  <Quote className="h-12 w-12 text-primary mx-auto mb-6" />
-                  
-                  <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic">
-                    "{testimonials[currentIndex].content}"
-                  </blockquote>
-
-                  <div className="flex items-center justify-center space-x-4">
-                    <img
-                      src={testimonials[currentIndex].image}
-                      alt={testimonials[currentIndex].name}
-                      className="w-16 h-16 rounded-full object-cover"
-                    />
-                    <div className="text-left">
-                      <div className="font-heading font-semibold text-lg text-gray-800">
-                        {testimonials[currentIndex].name}
-                      </div>
-                      <div className="text-gray-600">
-                        {testimonials[currentIndex].role}
-                      </div>
-                      <div className="flex space-x-1 mt-1">
-                        {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="w-4 h-4 text-accent"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                <div className="bg-background rounded-2xl p-2 md:p-4 shadow-lg flex justify-center items-center w-full">
+                  <img
+                    src={whatsappScreenshots[currentIndex]}
+                    alt={`WhatsApp testimonial ${currentIndex + 1}`}
+                    className="rounded-xl object-contain max-h-[500px] md:max-h-[600px] w-full mx-auto border border-gray-200 shadow-lg"
+                  />
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -144,7 +94,7 @@ const TestimonialsSection = () => {
 
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
-          {testimonials.map((_, index) => (
+          {whatsappScreenshots.map((_, index) => (
             <button
               key={index}
               onClick={() => goToTestimonial(index)}

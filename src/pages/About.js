@@ -107,7 +107,7 @@ const About = () => {
     {
       year: '2018',
       title: 'Foundation',
-      description: 'Nursing Exams Pros was founded with a mission to support nursing students through their educational journey.'
+  description: 'passnursing.com was founded with a mission to support nursing students through their educational journey.'
     },
     {
       year: '2019',
@@ -122,7 +122,7 @@ const About = () => {
     {
       year: '2022',
       title: 'Recognition',
-      description: 'Received accreditation as a leading nursing education support provider.'
+  description: 'Received accreditation as a leading nursing education support provider at passnursing.com.'
     },
     {
       year: '2024',
@@ -146,9 +146,9 @@ const About = () => {
               About Us
             </h1>
             <p className="text-xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-              Dedicated to personalized nursing education, we understand that each 
+              Dedicated to personalized nursing education at passnursing.com, we understand that each 
               student's path is unique. Our mission is to build a foundation of 
-              success for every nursing student we serve.
+              success for every nursing student we serve at passnursing.com.
             </p>
           </motion.div>
         </div>
@@ -174,10 +174,10 @@ const About = () => {
                 every student we serve.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Our team of experienced nursing professionals and educators work together to 
+                The passnursing.com team of experienced nursing professionals and educators work together to 
                 provide comprehensive support that goes beyond just passing exams. We're committed 
                 to helping you develop the critical thinking skills and clinical knowledge 
-                essential for your nursing career.
+                essential for your nursing career at passnursing.com.
               </p>
             </motion.div>
 
@@ -233,7 +233,7 @@ const About = () => {
               Our Impact
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Numbers that reflect our commitment to nursing education excellence
+              Numbers that reflect our commitment to nursing education excellence at passnursing.com
             </p>
           </motion.div>
 
@@ -277,7 +277,7 @@ const About = () => {
               Our Core Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do in supporting nursing students
+              The principles that guide everything we do at passnursing.com in supporting nursing students
             </p>
           </motion.div>
 
@@ -335,7 +335,7 @@ const About = () => {
               Meet Our Expert Team
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experienced nursing professionals dedicated to your success
+              Experienced nursing professionals at passnursing.com dedicated to your success
             </p>
           </motion.div>
 
@@ -396,7 +396,7 @@ const About = () => {
               Our Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Milestones in our mission to support nursing education
+              Milestones in our mission to support nursing education at passnursing.com
             </p>
           </motion.div>
 
@@ -449,10 +449,10 @@ const About = () => {
           >
             <Quote className="h-16 w-16 text-accent mx-auto mb-6" />
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">
-              Ready to Start Your Nursing Journey?
+              Ready to Start Your passnursing.com Journey?
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Join hundreds of nursing students who have achieved their academic goals 
+              Join hundreds of nursing students who have achieved their academic goals with passnursing.com
               with our personalized support and expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

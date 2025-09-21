@@ -3,28 +3,7 @@ import { motion } from 'framer-motion';
 import { Heart, Target, Users, Award } from 'lucide-react';
 
 const AboutSection = () => {
-  const values = [
-    {
-      icon: Heart,
-      title: 'Compassionate Care',
-      description: 'We understand the challenges nursing students face and provide empathetic, personalized support.'
-    },
-    {
-      icon: Target,
-      title: 'Focused Excellence',
-      description: 'Our specialized approach ensures you receive targeted assistance for nursing-specific challenges.'
-    },
-    {
-      icon: Users,
-      title: 'Collaborative Learning',
-      description: 'We foster an environment where students learn together and support each other\'s success.'
-    },
-    {
-      icon: Award,
-      title: 'Proven Results',
-      description: 'Our track record speaks for itself with a 95% success rate among our nursing students.'
-    }
-  ];
+  // Values grid replaced with a single image
 
   return (
     <section className="section-padding bg-white">
@@ -39,21 +18,33 @@ const AboutSection = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-gray-800 mb-6">
-                About Nursing Exams Pros
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                We are dedicated to personalized education, understanding that each individual's 
-                path is unique. By offering tailored guidance, expert insights, and resources that 
-                cater to various learning styles, we aim to build a foundation of success for 
-                every student we serve.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Our team of experienced nursing professionals and educators work together to 
-                provide comprehensive support that goes beyond just passing exams. We're committed 
-                to helping you develop the critical thinking skills and clinical knowledge 
-                essential for your nursing career.
-              </p>
+              <div className="mb-6">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+                  <span className="inline-block bg-gradient-to-r from-primary to-accent text-white font-extrabold rounded-full px-6 py-2 text-2xl md:text-3xl shadow-lg tracking-wide">
+                    10,000+
+                  </span>
+                  <span className="text-lg md:text-xl font-semibold text-gray-800 text-center sm:text-left">
+                    students trust us with their academic success
+                  </span>
+                 
+
+
+                </div>
+                <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                  At <span className="font-bold text-secondary">PassNursing.com</span>, we specialize in helping nursing and health science students excel in their studies and exams. Whether it’s <span className="font-semibold text-primary">TEAS</span>, <span className="font-semibold text-primary">HESI A2</span>, <span className="font-semibold text-primary">ATI Fundamentals Proctored Exams</span>, Canvas exams, online classes, or homework assignments, our expert team is here to ensure you achieve top results.
+                </p>
+                <div className="bg-blue-50 rounded-2xl p-6 mb-4">
+                  <div className="font-heading font-semibold text-lg text-primary mb-2">✨ What we can do for you:</div>
+                  <ul className="list-disc list-inside text-gray-700 space-y-1 text-base">
+                    <li>Take My TEAS Exam For Me</li>
+                    <li>Take My HESI A2 Exam For Me</li>
+                    <li>Take My Proctored Exam For Me</li>
+                    <li>Take My Online Class For Me</li>
+                    <li>Write My Nursing Essay</li>
+                    <li>Do My Homework For Me</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             {/* Stats */}
@@ -77,39 +68,20 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Column - Values Grid */}
+          {/* Right Column - Single Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            className="flex items-center justify-center"
           >
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
-                  viewport={{ once: true }}
-                  className="card hover:shadow-2xl"
-                >
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="bg-primary p-3 rounded-xl">
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="font-heading font-semibold text-lg text-gray-800">
-                      {value.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {value.description}
-                  </p>
-                </motion.div>
-              );
-            })}
+            {/* Replace the src below with your image path */}
+            <img 
+              src="successimages/working-desk.png" 
+              alt="About passnursing.com" 
+              className="rounded-2xl shadow-xl max-w-full h-auto object-contain border-2 border-gray-200"
+            />
           </motion.div>
         </div>
       </div>
