@@ -5,13 +5,19 @@ import { FileText, BookOpen, CheckCircle, ClipboardList, Quote, Award } from 'lu
 const EssayResearchWriting = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section className="bg-gradient-to-br from-primary to-blue-600 text-white py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="w-full flex flex-col items-center justify-center pt-0 pb-8">
+        <img 
+          src={process.env.PUBLIC_URL + '/successimages/Blue And White 3d Modern School Admission Linkedin Banner.png'} 
+          alt="School Admission Banner" 
+          className="w-full max-w-5xl object-contain mx-auto"
+          style={{display: 'block'}}
+        />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-6">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl"
+            className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900"
           >
             Essay & Research Paper Writing
           </motion.h1>
@@ -19,7 +25,7 @@ const EssayResearchWriting = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 text-xl text-blue-100 max-w-3xl mx-auto"
+            className="mt-6 text-xl text-gray-700 max-w-3xl mx-auto"
           >
             Hone your academic writing skills with specialized guidance tailored for healthcare education.
           </motion.p>

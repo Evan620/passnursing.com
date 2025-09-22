@@ -5,7 +5,15 @@ import { FileText, CheckCircle, BookOpen, Clock, Award, PenTool } from 'lucide-r
 const HomeworkAssignmentHelp = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section className="bg-gradient-to-br from-secondary to-green-600 text-white py-20">
+      <section
+        className="text-white py-20"
+        style={{
+          backgroundImage: "url('/successimages/Blue And White 3d Modern School Admission Linkedin Banner.png')",
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

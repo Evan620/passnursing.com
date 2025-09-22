@@ -5,13 +5,21 @@ import { ClipboardCheck, Timer, BookOpen, CheckCircle, Cpu, Target } from 'lucid
 const OnlineQuizzes = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section className="bg-gradient-to-br from-secondary to-green-600 text-white py-20">
+      <section
+        className="text-white py-20"
+        style={{
+          backgroundImage: "url('/successimages/Blue And White 3d Modern School Admission Linkedin Banner.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl">
             Online Quizzes
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-6 text-xl text-green-100 max-w-3xl mx-auto">
-            Master modern assessment formats with strategic preparation, real‑world scenarios, and expert feedback.
+            Master modern assessment formats with strategic preparation, realworld scenarios, and expert feedback.
           </motion.p>
         </div>
       </section>
