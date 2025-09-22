@@ -332,8 +332,6 @@ const About = () => {
       </section>
 
 
-      // ...existing code...
-
       {/* CTA Section */}
       <section className="section-padding bg-primary">
         <div className="max-w-4xl mx-auto text-center">
