@@ -14,13 +14,12 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-primary to-blue-600 text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+    <section className="relative text-white overflow-hidden" style={{
+      backgroundImage: `linear-gradient(rgba(16,40,80,0.7),rgba(16,40,80,0.7)), url('/successimages/Nursing-Exams-Pros-Website-Banner-1-1.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    }}>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
   <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
