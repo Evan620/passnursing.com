@@ -143,12 +143,11 @@ const About = () => {
             className="text-center"
           >
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6">
-              About Us
+              About Us <br />
             </h1>
             <p className="text-xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-              Dedicated to personalized nursing education at passnursing.com, we understand that each 
-              student's path is unique. Our mission is to build a foundation of 
-              success for every nursing student we serve at passnursing.com.
+              Academic success in healthcare education matters.
+
             </p>
           </motion.div>
         </div>
@@ -168,10 +167,7 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                We are dedicated to personalized education, understanding that each individual's 
-                path is unique. By offering tailored guidance, expert insights, and resources that 
-                cater to various learning styles, we aim to build a foundation of success for 
-                every student we serve.
+                At PassNursing.com, we know that excelling in healthcare studies requires more than determination — it demands the right support, resources, and guidance. That’s why we’ve dedicated ourselves to being a trusted partner for students navigating the challenges of nursing and healthcare education. From personalized study assistance to strategies that build confidence and mastery, we’re here to help you not just get through your courses, but truly succeed in your academic journey and prepare for a thriving career in healthcare.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 The passnursing.com team of experienced nursing professionals and educators work together to 
@@ -189,28 +185,42 @@ const About = () => {
               className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8"
             >
               <h3 className="font-heading font-bold text-2xl text-gray-800 mb-6">
-                Our Vision
+                Our Top Services
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-secondary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Empowering Future Nurses</h4>
-                    <p className="text-gray-600 text-sm">Creating confident, competent nursing professionals</p>
+                    <h4 className="font-semibold text-gray-800 mb-1">Online Quizzes</h4>
+                    <p className="text-gray-600 text-sm">Conquer online quizzes with our expert guidance, ensuring accuracy and boosting your academic performance.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-secondary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Excellence in Education</h4>
-                    <p className="text-gray-600 text-sm">Setting the standard for nursing education support</p>
+                    <h4 className="font-semibold text-gray-800 mb-1">Essay & Research Paper Writing</h4>
+                    <p className="text-gray-600 text-sm">Elevate your academics with our specialized support for exceptional essay and research paper writing.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-secondary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Innovation & Growth</h4>
-                    <p className="text-gray-600 text-sm">Continuously improving our methods and resources</p>
+                    <h4 className="font-semibold text-gray-800 mb-1">Homework & Assignment Help</h4>
+                    <p className="text-gray-600 text-sm">Elevate your academic journey with expert guidance through our Homework & Assignment Help services.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-secondary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Online Class Help</h4>
+                    <p className="text-gray-600 text-sm">Achieve online class success with our expert guidance, personalized support, and tailored study strategies.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-secondary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Online Exams Help</h4>
+                    <p className="text-gray-600 text-sm">Streamline your success with expert assistance and guidance through our comprehensive Online Exams Help.</p>
                   </div>
                 </div>
               </div>
@@ -321,121 +331,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-background">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
-              Meet Our Expert Team
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experienced nursing professionals at passnursing.com dedicated to your success
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="card text-center hover:shadow-2xl"
-              >
-                <div className="relative mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
-                  />
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                    <Stethoscope className="h-8 w-8 text-primary bg-white rounded-full p-1 shadow-lg" />
-                  </div>
-                </div>
-
-                <h3 className="font-heading font-bold text-xl text-gray-800 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-primary font-semibold mb-2">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-4">{member.experience}</p>
-
-                <div className="space-y-1">
-                  {member.specialties.map((specialty, specialtyIndex) => (
-                    <span
-                      key={specialtyIndex}
-                      className="inline-block bg-secondary/20 text-secondary text-xs px-2 py-1 rounded-full mr-1 mb-1"
-                    >
-                      {specialty}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
-              Our Journey
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Milestones in our mission to support nursing education at passnursing.com
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/20 rounded-full"></div>
-            
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={item.year}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`flex items-center ${
-                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                  }`}
-                >
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                    <div className="bg-background rounded-2xl p-6 shadow-lg">
-                      <div className="text-primary font-bold text-lg mb-2">{item.year}</div>
-                      <h3 className="font-heading font-bold text-xl text-gray-800 mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600">{item.description}</p>
-                    </div>
-                  </div>
-
-                  <div className="w-8 h-8 bg-primary rounded-full border-4 border-white shadow-lg flex items-center justify-center z-10">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                  </div>
-
-                  <div className="w-1/2"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      // ...existing code...
 
       {/* CTA Section */}
       <section className="section-padding bg-primary">
