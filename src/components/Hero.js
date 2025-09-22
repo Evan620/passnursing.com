@@ -21,47 +21,8 @@ const Hero = () => {
       backgroundRepeat: 'no-repeat',
     }}>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-          {/* Left Card - Duplicate of Right Card */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-               className="relative hidden lg:block flex-shrink-0 w-full max-w-2xl"
-          >
-            <div className="relative z-10">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 text-gray-800 flex items-center justify-center">
-                <img 
-                  src={leftCardImg}
-                  alt="Nursing Success Story" 
-                  className="w-full h-auto rounded-lg" 
-                />
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute -top-4 -right-4 bg-accent text-white p-4 rounded-xl shadow-lg"
-              >
-                <div className="text-center">
-                  <div className="font-bold text-2xl">95%</div>
-                  <div className="text-sm">Success Rate</div>
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="absolute -bottom-4 -left-4 bg-secondary text-white p-4 rounded-xl shadow-lg"
-              >
-                <div className="text-center">
-                  <div className="font-bold text-2xl">24/7</div>
-                  <div className="text-sm">Support</div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
+    <div className="relative max-w-7xl mx-auto px-2 sm:px-6 lg:px-12 py-20 lg:py-32">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-12 w-full">
 
           {/* Center Column - Content */}
           <motion.div
@@ -146,14 +107,14 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex-shrink-0 w-full max-w-2xl"
+            className="relative flex-shrink-0 w-full max-w-md md:max-w-lg xl:max-w-xl 2xl:max-w-2xl"
           >
             <div className="relative z-10">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 text-gray-800 flex items-center justify-center">
+              <div className="bg-white rounded-2xl shadow-2xl p-4 md:p-8 text-gray-800 flex items-center justify-center overflow-hidden">
                 <img 
                   src={rightCardImg}
                   alt="Nursing Success Story" 
-                  className="w-full h-[400px] md:h-[500px] object-contain rounded-lg" 
+                  className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-contain rounded-lg" 
                 />
               </div>
               <motion.div
