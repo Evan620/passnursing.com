@@ -273,63 +273,16 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Exam Logos Section */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
-              Our Core Values
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do at passnursing.com in supporting nursing students
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="card hover:shadow-2xl"
-                >
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="bg-primary p-4 rounded-2xl">
-                      <Icon className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="font-heading font-bold text-2xl text-gray-800">
-                      {value.title}
-                    </h3>
-                  </div>
-
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {value.description}
-                  </p>
-
-                  <div className="space-y-2">
-                    {value.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
-                        <span className="text-sm text-gray-600">{detail}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="flex flex-wrap justify-center items-center gap-8 py-8">
+            <img src={require("../assets/images/proctoru-proctorio-150x150.jpg")} alt="ProctorU / Proctorio" className="h-28 w-auto object-contain shadow-lg rounded-lg bg-white mx-8" />
+            <img src={require("../assets/images/lockdown-examity-150x150.jpg")} alt="LockDown / Examity" className="h-28 w-auto object-contain shadow-lg rounded-lg bg-white mx-8" />
           </div>
         </div>
       </section>
+
 
 
       {/* CTA Section */}

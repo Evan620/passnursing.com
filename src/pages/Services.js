@@ -1,280 +1,68 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen, 
   PenTool, 
   FileText, 
   GraduationCap, 
   ClipboardCheck,
-  CheckCircle,
-  Clock,
-  Users,
-  Star
+  ChevronDown,
+  ArrowRight
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
+  const [open, setOpen] = useState(true);
   const services = [
-    {
-      icon: BookOpen,
-      title: 'Online Exams Help',
-  description: 'Comprehensive support for nursing exams and quizzes with expert guidance from passnursing.com.',
-      features: [
-        'Exam preparation strategies',
-        'Quiz assistance and practice',
-        'Study guides and materials',
-        'Test-taking techniques',
-        'Time management tips',
-        'Stress reduction methods'
-      ],
-      process: [
-        'Initial assessment of your needs',
-        'Customized study plan creation',
-        'Regular practice sessions',
-        'Mock exam simulations',
-        'Performance feedback and improvement'
-      ],
-      pricing: 'Starting at $45/hour',
-      duration: 'Flexible scheduling'
-    },
-    {
-      icon: PenTool,
-      title: 'Homework & Assignment Help',
-      description: 'Professional assistance with essays, projects, and written tasks.',
-      features: [
-        'Essay writing and editing',
-        'Research project completion',
-        'Academic formatting (APA, MLA)',
-        'Citation and referencing',
-        'Grammar and style improvement',
-        'Plagiarism-free content'
-      ],
-      process: [
-        'Topic analysis and planning',
-        'Research and data collection',
-        'Draft creation and review',
-        'Editing and proofreading',
-        'Final submission preparation'
-      ],
-      pricing: 'Starting at $35/page',
-      duration: '24-48 hours turnaround'
-    },
-    {
-      icon: FileText,
-      title: 'Essay & Research Paper Writing',
-  description: 'Specialized research and academic writing services for nursing students at passnursing.com.',
-      features: [
-        'Literature reviews',
-        'Case study analysis',
-        'Research paper writing',
-        'Evidence-based practice papers',
-        'Nursing theory applications',
-        'Clinical reflection papers'
-      ],
-      process: [
-        'Research topic selection',
-        'Literature review and analysis',
-        'Thesis statement development',
-        'Structured writing process',
-        'Peer review and revisions'
-      ],
-      pricing: 'Starting at $40/page',
-      duration: '3-7 days depending on length'
-    },
-    {
-      icon: GraduationCap,
-      title: 'Online Class Help',
-  description: 'Guidance and support for online nursing courses and virtual learning at passnursing.com.',
-      features: [
-        'Discussion post assistance',
-        'Virtual presentation support',
-        'Online assignment completion',
-        'Class participation guidance',
-        'Virtual lab assistance',
-        'Online exam preparation'
-      ],
-      process: [
-        'Course material review',
-        'Assignment understanding',
-        'Content creation and submission',
-        'Regular progress monitoring',
-        'Grade improvement strategies'
-      ],
-      pricing: 'Starting at $50/session',
-      duration: 'Ongoing throughout course'
-    },
-    {
-      icon: ClipboardCheck,
-      title: 'Online Quizzes',
-      description: 'Practice and assistance with quizzes to reinforce learning.',
-      features: [
-        'Practice quiz creation',
-        'Quiz preparation strategies',
-        'Performance analysis',
-        'Weak area identification',
-        'Study material recommendations',
-        'Confidence building'
-      ],
-      process: [
-        'Learning objective assessment',
-        'Practice quiz administration',
-        'Performance evaluation',
-        'Targeted study recommendations',
-        'Progress tracking'
-      ],
-      pricing: 'Starting at $25/quiz',
-      duration: 'Immediate feedback'
-    }
+    { icon: BookOpen, title: 'Online Exams Help', description: 'Comprehensive support for nursing exams and quizzes with expert guidance.', route: '/services/online-exams-help' },
+    { icon: PenTool, title: 'Homework & Assignment Help', description: 'Professional assistance with essays, projects, and written tasks.', route: '/services/homework-assignment-help' },
+    { icon: FileText, title: 'Essay & Research Paper Writing', description: 'Specialized research and academic writing services for nursing students.', route: '/services/essay-research-writing' },
+    { icon: GraduationCap, title: 'Online Class Help', description: 'Guidance and support for online nursing courses and virtual learning.', route: '/services/online-class-help' },
+    { icon: ClipboardCheck, title: 'Online Quizzes', description: 'Practice and assistance with quizzes to reinforce learning.', route: '/services/online-quizzes' }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-blue-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive academic support designed specifically for nursing students at passnursing.com. 
-              From exam preparation to assignment assistance, we're here to help you succeed.
-            </p>
-          </motion.div>
+      <section className="bg-gradient-to-br from-primary to-blue-600 text-white py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-heading font-bold text-4xl md:text-5xl">Our Services</motion.h1>
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-4 text-blue-100 text-lg">Choose a service below to view detailed information.</motion.p>
         </div>
       </section>
 
-      {/* Services Grid */}
       <section className="section-padding">
-        <div className="max-w-7xl mx-auto">
-          <div className="space-y-16">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                  }`}
-                >
-                  {/* Content */}
-                  <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-primary p-4 rounded-2xl">
-                        <Icon className="h-8 w-8 text-white" />
-                      </div>
-                      <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-800">
-                        {service.title}
-                      </h2>
-                    </div>
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-6">
+            <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-background hover:bg-gray-100 transition-colors duration-200">
+              <span className="font-heading font-semibold text-lg text-gray-800">Select a Service</span>
+              <ChevronDown className={`h-5 w-5 text-gray-600 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+            </button>
 
-                    <p className="text-lg text-gray-600 leading-relaxed">
-                      {service.description}
-                    </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div>
-                        <h3 className="font-heading font-semibold text-lg text-gray-800 mb-4">
-                          What We Offer
-                        </h3>
-                        <ul className="space-y-2">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-start space-x-2">
-                              <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-600">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h3 className="font-heading font-semibold text-lg text-gray-800 mb-4">
-                          Our Process
-                        </h3>
-                        <ul className="space-y-2">
-                          {service.process.map((step, stepIndex) => (
-                            <li key={stepIndex} className="flex items-start space-x-2">
-                              <div className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold mt-0.5 flex-shrink-0">
-                                {stepIndex + 1}
-                              </div>
-                              <span className="text-gray-600">{step}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <div className="flex items-center space-x-2 text-gray-600">
-                        <Clock className="h-5 w-5 text-primary" />
-                        <span>{service.duration}</span>
-                      </div>
-                      <div className="flex items-center space-x-2 text-gray-600">
-                        <Star className="h-5 w-5 text-accent" />
-                        <span className="font-semibold">{service.pricing}</span>
-                      </div>
-                    </div>
-
-                    <button className="btn-primary">
-                      Request This Service
-                    </button>
-                  </div>
-
-                  {/* Visual/Image Placeholder */}
-                  <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 h-96 flex items-center justify-center">
-                      <div className="text-center">
-                        <Icon className="h-24 w-24 text-primary mx-auto mb-4" />
-                        <h3 className="font-heading font-semibold text-xl text-gray-800 mb-2">
-                          {service.title}
-                        </h3>
-                        <p className="text-gray-600">
-                          Professional nursing education support at passnursing.com
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+            <AnimatePresence>
+              {open && (
+                <motion.ul initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.2 }} className="mt-4 divide-y divide-gray-100">
+                  {services.map((service) => {
+                    const Icon = service.icon;
+                    return (
+                      <li key={service.title} className="py-3">
+                        <button onClick={() => navigate(service.route)} className="w-full flex items-center justify-between text-left group">
+                          <div className="flex items-center space-x-3">
+                            <div className="bg-primary p-2 rounded-xl"><Icon className="h-5 w-5 text-white" /></div>
+                            <div>
+                              <div className="font-heading font-semibold text-gray-800 group-hover:text-primary transition-colors duration-200">{service.title}</div>
+                              <div className="text-sm text-gray-600">{service.description}</div>
+                            </div>
+                          </div>
+                          <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-primary transition-colors duration-200" />
+                        </button>
+                      </li>
+                    );
+                  })}
+                </motion.ul>
+              )}
+            </AnimatePresence>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-white"
-          >
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Choose the service that best fits your needs and take the first step 
-              toward academic success in your passnursing.com journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-accent">
-                Request Service Now
-              </button>
-              <button className="btn-secondary">
-                Contact Us
-              </button>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>
