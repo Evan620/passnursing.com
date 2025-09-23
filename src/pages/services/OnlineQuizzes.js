@@ -5,13 +5,24 @@ import { ClipboardCheck, Timer, BookOpen, CheckCircle, Cpu, Target } from 'lucid
 const OnlineQuizzes = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section className="w-full flex flex-col items-center justify-center pt-12 pb-8">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl">
+      <section className="relative w-full py-20 md:py-28 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${require('../../assets/images/banner-4-1.jpg2_-1.jpg')})` }}>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6 }} 
+            className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6"
+          >
             Online Quizzes
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-6 text-xl text-green-100 max-w-3xl mx-auto">
-            Master modern assessment formats with strategic preparation, realworld scenarios, and expert feedback.
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6, delay: 0.1 }} 
+            className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed"
+          >
+            Master modern assessment formats with strategic preparation, real-world scenarios, and expert feedback.
           </motion.p>
         </div>
       </section>

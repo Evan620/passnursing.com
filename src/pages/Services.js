@@ -10,6 +10,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -24,21 +25,11 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <section
-        className="relative text-white py-16"
-        style={{
-          backgroundImage: "url('/successimages/Blue And White 3d Modern School Admission Linkedin Banner.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-blue-600/80 opacity-90"></div>
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-heading font-bold text-4xl md:text-5xl">Our Services</motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-4 text-blue-100 text-lg">Choose a service below to view detailed information.</motion.p>
-        </div>
-      </section>
+      <HeroSection 
+        title="Our"
+        accentWord="Services"
+        subtitle="Comprehensive academic support tailored for nursing students"
+      />
 
       <section className="section-padding">
         <div className="max-w-3xl mx-auto">

@@ -11,6 +11,7 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
+import HeroSection from '../components/HeroSection';
 
 const RequestService = () => {
   const [formData, setFormData] = useState({
@@ -150,24 +151,11 @@ const RequestService = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-accent to-orange-500 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6">
-              Request Service
-            </h1>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto leading-relaxed">
-              Get personalized academic support for your nursing education. 
-              Tell us about your needs and we'll match you with the right resources.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection 
+        title="Request"
+        accentWord="Service"
+        subtitle="Fill out the form below and our team will get back to you as soon as possible."
+      />
 
       {/* Form Section */}
       <section className="section-padding">

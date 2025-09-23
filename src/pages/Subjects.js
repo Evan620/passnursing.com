@@ -1,19 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  BookOpen, 
-  Stethoscope, 
-  Heart, 
-  Brain,
-  Pill,
-  Baby,
-  Shield,
-  Activity,
-  MessageCircle
-} from 'lucide-react';
+import { Search, Filter, BookOpen, Stethoscope, Heart, Brain, Pill, Baby, Shield, Activity, MessageCircle } from 'lucide-react';
 import ContactFormPopup from '../components/ContactFormPopup';
+import HeroSection from '../components/HeroSection';
 
 const Subjects = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -329,25 +318,11 @@ const Subjects = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary to-green-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6">
-              Nursing Subjects
-            </h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive support for all nursing subjects, from prerequisites to 
-              advanced specialty areas. Find the help you need for your specific course.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection 
+        title="Nursing"
+        accentWord="Subjects"
+        subtitle="Explore our comprehensive nursing subject offerings and get the help you need to succeed."
+      />
 
       {/* Search and Filter Section */}
       <section className="section-padding">

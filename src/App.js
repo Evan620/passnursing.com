@@ -8,7 +8,7 @@ import Services from './pages/Services';
 import Subjects from './pages/Subjects';
 import RequestService from './pages/RequestService';
 import About from './pages/About';
-import Blog from './pages/Blog';
+import Portfolio from './pages/Portfolio';
 import OnlineExamsHelp from './pages/services/OnlineExamsHelp';
 import HomeworkAssignmentHelp from './pages/services/HomeworkAssignmentHelp';
 import EssayResearchWriting from './pages/services/EssayResearchWriting';
@@ -32,7 +32,7 @@ function App() {
             <Route path="/subjects" element={<Subjects />} />
             <Route path="/request-service" element={<RequestService />} />
             <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </main>
         <Footer />

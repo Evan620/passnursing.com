@@ -5,13 +5,14 @@ import { BookOpen, CheckCircle, GraduationCap, Shield, Clock, Stethoscope } from
 const OnlineExamsHelp = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section className="w-full flex flex-col items-center justify-center pt-12 pb-8">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative w-full py-20 md:py-28 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${require('../../assets/images/banner-4-1.jpg2_-1.jpg')})` }}>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl"
+            className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6"
           >
             Online Exams Help
           </motion.h1>
@@ -19,7 +20,7 @@ const OnlineExamsHelp = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 text-xl text-blue-100 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed"
           >
             PassNursing.com is your dedicated partner in navigating the complexities of healthcare education, offering personalized support for academic success.
           </motion.p>

@@ -14,6 +14,7 @@ import {
   Star,
   Quote
 } from 'lucide-react';
+import HeroSection from '../components/HeroSection';
 
 const About = () => {
   const values = [
@@ -107,7 +108,7 @@ const About = () => {
     {
       year: '2018',
       title: 'Foundation',
-  description: 'passnursing.com was founded with a mission to support nursing students through their educational journey.'
+      description: 'passnursing.com was founded with a mission to support nursing students through their educational journey.'
     },
     {
       year: '2019',
@@ -122,7 +123,7 @@ const About = () => {
     {
       year: '2022',
       title: 'Recognition',
-  description: 'Received accreditation as a leading nursing education support provider at passnursing.com.'
+      description: 'Received accreditation as a leading nursing education support provider at passnursing.com.'
     },
     {
       year: '2024',
