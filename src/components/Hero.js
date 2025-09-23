@@ -33,7 +33,7 @@ const Hero = () => {
           >
             <div className="space-y-4">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-center">
-                Succeed with <span className="text-accent">PassNursing.com</span>
+                Ace Your Nursing Exams with <span className="text-accent">PassNursing.com</span>
               </h1>
             </div>
 

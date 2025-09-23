@@ -5,15 +5,7 @@ import { BookOpen, CheckCircle, GraduationCap, Shield, Clock, Stethoscope } from
 const OnlineExamsHelp = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section
-        className="text-white py-20"
-        style={{
-          backgroundImage: "url('/successimages/Blue And White 3d Modern School Admission Linkedin Banner.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <section className="w-full flex flex-col items-center justify-center pt-12 pb-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

@@ -5,14 +5,8 @@ import { FileText, BookOpen, CheckCircle, ClipboardList, Quote, Award } from 'lu
 const EssayResearchWriting = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section className="w-full flex flex-col items-center justify-center pt-0 pb-8">
-        <img 
-          src={process.env.PUBLIC_URL + '/successimages/Blue And White 3d Modern School Admission Linkedin Banner.png'} 
-          alt="School Admission Banner" 
-          className="w-full max-w-5xl object-contain mx-auto"
-          style={{display: 'block'}}
-        />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-6">
+      <section className="w-full flex flex-col items-center justify-center pt-12 pb-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
