@@ -1,6 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
+// Import all images
+const images = {
+  whatsapp1: '/successimages/WhatsApp-Image-2023-09-06-at-19.25.09.jpg',
+  whatsapp2: '/successimages/WhatsApp-Image-2023-09-06-at-19.25.11-1.jpg',
+  whatsapp3: '/successimages/WhatsApp-Image-2023-09-06-at-19.25.13.jpg',
+  whatsapp4: '/successimages/WhatsApp-Image-2023-09-06-at-19.25.14-1.jpg',
+  whatsapp5: '/successimages/WhatsApp-Image-2023-09-08-at-14.56.07-1.jpg',
+  whatsapp6: '/successimages/WhatsApp-Image-2023-09-08-at-14.56.08-1-1.jpg',
+  whatsapp7: '/successimages/WhatsApp-Image-2023-09-08-at-14.56.08-2.jpg',
+  atiTeas: '/successimages/WhatsApp-Image-2023-09-06-at-19.25.14-1024x737.jpeg',
+  nclex: '/successimages/Screenshot-2024-08-22-at-15.23.39-1024x487.png',
+  placeholder: '/images/placeholder.svg'
+};
 
 const Portfolio = () => {
   const navigate = useNavigate();
@@ -32,49 +46,70 @@ const Portfolio = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'HESI A2 Exam',
-      image: '/images/portfolio/hesi-a2.jpg',
+      title: 'HESI A2 Exam Success',
+      image: images.whatsapp1,
       category: 'HESI',
-      tags: ['HESI', 'Exam', 'Practice Tests']
+      tags: ['HESI A2', 'Exam Success', 'Scores']
     },
     {
       id: 2,
-      title: 'ATI Fundamentals',
-      image: '/images/portfolio/ati-fundamentals.jpg',
+      title: 'ATI TEAS Exam Results',
+      image: images.whatsapp2,
       category: 'ATI',
-      tags: ['ATI', 'Fundamentals', 'Exam Prep']
+      tags: ['ATI TEAS', 'Exam Results', 'High Scores']
     },
     {
       id: 3,
-      title: 'NCLEX Review',
-      image: '/images/portfolio/nclex.jpg',
+      title: 'Proctored Exam Success',
+      image: images.whatsapp3,
       category: 'Proctored',
-      tags: ['NCLEX', 'Proctored', 'Review']
+      tags: ['Proctored Exam', 'Success', 'High Score']
     },
     {
       id: 4,
-      title: 'ATI TEAS Prep',
-      image: '/images/portfolio/teas.jpg',
-      category: 'ATI Teas',
-      tags: ['ATI', 'TEAS', 'Entrance Exam']
+      title: 'HESI Exit Exam Score',
+      image: images.whatsapp4,
+      category: 'HESI',
+      tags: ['HESI Exit', 'Exam Score', 'Success']
     },
     {
       id: 5,
-      title: 'Nursing Classes',
-      image: '/images/portfolio/nursing-classes.jpg',
-      category: 'Classes',
-      tags: ['Classes', 'Tutoring', 'Study']
+      title: 'ATI TEAS Exam Prep',
+      image: images.whatsapp5,
+      category: 'ATI Teas',
+      tags: ['ATI TEAS', 'Exam Prep', 'Practice']
     },
     {
       id: 6,
-      title: 'HESI Exit Exam',
-      image: '/images/portfolio/hesi-exit.jpg',
+      title: 'HESI A2 Test Results',
+      image: images.whatsapp6,
       category: 'HESI',
-      tags: ['HESI', 'Exit Exam', 'Graduation']
+      tags: ['HESI A2', 'Test Results', 'Success']
+    },
+    {
+      id: 7,
+      title: 'HESI A2 Math Section',
+      image: images.whatsapp7,
+      category: 'HESI',
+      tags: ['HESI A2', 'Math Section', 'High Score']
+    },
+    {
+      id: 8,
+      title: 'ATI TEAS 2023',
+      image: images.atiTeas,
+      category: 'ATI Teas',
+      tags: ['ATI TEAS', '2023', 'Exam Prep']
+    },
+    {
+      id: 9,
+      title: 'NCLEX Success',
+      image: images.nclex,
+      category: 'Proctored',
+      tags: ['NCLEX', 'Success', 'Results']
     }
   ];
 
-  const filters = ['All', 'ATI', 'HESI', 'ATI Teas', 'Classes', 'Proctored'];
+  const filters = ['All', 'ATI', 'HESI', 'ATI Teas', 'Proctored'];
 
   const filteredItems = portfolioItems.filter(item => {
     return activeFilter === 'All' || item.category === activeFilter;
@@ -153,11 +188,14 @@ const Portfolio = () => {
                 <div className="relative overflow-hidden h-56">
                   <img
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    src={process.env.PUBLIC_URL + item.image}
+                    src={item.image}
                     alt={item.title}
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/600x400?text=Portfolio+Image';
+                      console.error('Error loading image:', item.image);
+                      e.target.src = images.placeholder;
+                      e.target.onerror = null; // Prevent infinite loop if placeholder also fails
                     }}
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div className="space-y-2">

@@ -1,45 +1,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   BookOpen, 
   PenTool, 
   FileText, 
   GraduationCap, 
   ClipboardCheck,
-  ArrowRight 
+  ArrowRight, 
+  Settings2Icon
 } from 'lucide-react';
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
+  
+  const handleLearnMore = (serviceTitle) => {
+    navigate(`/request-service?service=${encodeURIComponent(serviceTitle)}`);
+  };
   const services = [
     {
       icon: BookOpen,
-      title: 'Online Exams Help',
-  description: 'Support for nursing exams & quizzes with expert guidance and comprehensive preparation strategies from passnursing.com.',
-      features: ['Exam preparation', 'Quiz assistance', 'Study strategies', 'Test-taking tips']
+      title: 'Take my ATI TEAS for me',
+      description: 'Struggling with your ATI TEAS exam? Let our expert team assist you in acing your ATI TEAS test. Our experienced professionals will guide you through the exam preparation process, providing personalized support and resources to help you succeed.'
     },
     {
       icon: PenTool,
-      title: 'Homework & Assignment Help',
-  description: 'Essays, projects, and written tasks completed with nursing expertise and academic excellence at passnursing.com.',
-      features: ['Essay writing', 'Project completion', 'Research assistance', 'Academic formatting']
+      title: 'Take my HESI A2 for me',
+      description: 'Struggling with your HESI A2 exam? Let our expert team assist you in acing your HESI A2 test. Our experienced professionals will guide you through the exam preparation process, providing personalized support and resources to help you succeed.'
     },
     {
       icon: FileText,
-      title: 'Essay & Research Paper Writing',
-  description: 'Research, formatting, and academic writing services tailored for nursing students at passnursing.com.',
-      features: ['Research papers', 'Literature reviews', 'Case studies', 'APA formatting']
+      title: 'Take my dosage calculation',
+      description: 'Struggling with your dosage calculation exam? Let our expert team assist you in acing your dosage calculation test. Our experienced professionals will guide you through the exam preparation process, providing personalized support and resources to help you succeed.'
     },
     {
       icon: GraduationCap,
-      title: 'Online Class Help',
-      description: 'Guidance for online classes, discussions, and virtual learning environments.',
-      features: ['Class participation', 'Discussion posts', 'Virtual presentations', 'Online assignments']
+      title: 'Take my ATI Fundamentals',
+      description: 'Struggling with the ATI Fundamentals exam? Let our expert team assist you in acing your ATI Fundamentals test. Our experienced professionals will guide you through the exam preparation process, providing personalized support and resources to help you succeed.'
     },
     {
       icon: ClipboardCheck,
-      title: 'Online Quizzes',
-      description: 'Practice and assistance with quizzes to reinforce learning and improve performance.',
-      features: ['Practice quizzes', 'Quiz preparation', 'Performance analysis', 'Study materials']
+      title: 'Take my MedSurg Exam',
+      description: 'Struggling with your MedSurg exam? Let our expert team assist you in acing your MedSurg test. Our experienced professionals will guide you through the exam preparation process, providing personalized support and resources to help you succeed.'
+    },
+    {
+      icon: Settings2Icon,
+      title: 'Take my NCLEX Exam',
+      description: 'Struggling with your NCLEX exam? Let our expert team assist you in acing your NCLEX test. Our experienced professionals will guide you through the exam preparation process, providing personalized support and resources to help you succeed.'
     }
   ];
 
@@ -111,17 +118,11 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
 
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
-                      <span className="text-sm text-gray-600">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <button className="flex items-center space-x-2 text-primary font-medium group-hover:text-secondary transition-colors duration-300">
-                  <span>Learn More</span>
+                <button 
+                  onClick={() => handleLearnMore(service.title)}
+                  className="flex items-center space-x-2 text-primary font-medium group-hover:text-secondary transition-colors duration-300"
+                >
+                  <span>Request Service</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </motion.div>
