@@ -16,7 +16,7 @@ const ReadyToGetStartedSection = () => (
             Ready to Get Started?
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of nursing students who have achieved their academic goals with passnursing.com
+            Join hundreds of nursing students who have achieved their academic goals with nursingexamcoach.com
             with our personalized support services.
           </p>
           <button className="btn-accent text-lg px-8 py-4">

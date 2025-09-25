@@ -31,7 +31,7 @@ const AboutSection = () => {
 
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                  At <span className="font-bold text-secondary">PassNursing.com</span>, we specialize in helping nursing and health science students excel in their studies and exams. Whether it’s <span className="font-semibold text-primary">TEAS</span>, <span className="font-semibold text-primary">HESI A2</span>, <span className="font-semibold text-primary">ATI Fundamentals Proctored Exams</span>, Canvas exams, online classes, or homework assignments, our expert team is here to ensure you achieve top results.
+                  At <span className="font-bold text-secondary">NursingExamCoach.com</span>, we specialize in helping nursing and health science students excel in their studies and exams. Whether it’s <span className="font-semibold text-primary">TEAS</span>, <span className="font-semibold text-primary">HESI A2</span>, <span className="font-semibold text-primary">ATI Fundamentals Proctored Exams</span>, Canvas exams, online classes, or homework assignments, our expert team is here to ensure you achieve top results.
                 </p>
                 <div className="bg-blue-50 rounded-2xl p-6 mb-4">
                   <div className="font-heading font-semibold text-lg text-primary mb-2">✨ What we can do for you:</div>
@@ -79,7 +79,7 @@ const AboutSection = () => {
             {/* Replace the src below with your image path */}
             <img 
               src="successimages/working-desk.png" 
-              alt="About passnursing.com" 
+              alt="About nursingexamcoach.com" 
               className="rounded-2xl shadow-xl max-w-full h-auto object-contain border-2 border-gray-200"
             />
           </motion.div>

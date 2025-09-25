@@ -135,7 +135,7 @@ const RequestService = () => {
           </h2>
           <p className="text-gray-600 mb-6">
             Thank you for your request. We'll get back to you within 24 hours 
-            to discuss your passnursing.com education needs.
+            to discuss your nursingexamcoach.com education needs.
           </p>
           <button
             onClick={() => setIsSubmitted(false)}

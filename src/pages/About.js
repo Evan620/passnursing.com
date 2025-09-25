@@ -108,7 +108,7 @@ const About = () => {
     {
       year: '2018',
       title: 'Foundation',
-      description: 'passnursing.com was founded with a mission to support nursing students through their educational journey.'
+  description: 'nursingexamcoach.com was founded with a mission to support nursing students through their educational journey.'
     },
     {
       year: '2019',
@@ -123,7 +123,7 @@ const About = () => {
     {
       year: '2022',
       title: 'Recognition',
-      description: 'Received accreditation as a leading nursing education support provider at passnursing.com.'
+  description: 'Received accreditation as a leading nursing education support provider at nursingexamcoach.com.'
     },
     {
       year: '2024',
@@ -168,13 +168,13 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                At PassNursing.com, we know that excelling in healthcare studies requires more than determination — it demands the right support, resources, and guidance. That’s why we’ve dedicated ourselves to being a trusted partner for students navigating the challenges of nursing and healthcare education. From personalized study assistance to strategies that build confidence and mastery, we’re here to help you not just get through your courses, but truly succeed in your academic journey and prepare for a thriving career in healthcare.
+                At NursingExamCoach.com, we know that excelling in healthcare studies requires more than determination — it demands the right support, resources, and guidance. That’s why we’ve dedicated ourselves to being a trusted partner for students navigating the challenges of nursing and healthcare education. From personalized study assistance to strategies that build confidence and mastery, we’re here to help you not just get through your courses, but truly succeed in your academic journey and prepare for a thriving career in healthcare.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                The passnursing.com team of experienced nursing professionals and educators work together to 
+                The nursingexamcoach.com team of experienced nursing professionals and educators work together to 
                 provide comprehensive support that goes beyond just passing exams. We're committed 
                 to helping you develop the critical thinking skills and clinical knowledge 
-                essential for your nursing career at passnursing.com.
+                essential for your nursing career at nursingexamcoach.com.
               </p>
             </motion.div>
 
@@ -244,7 +244,7 @@ const About = () => {
               Our Impact
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Numbers that reflect our commitment to nursing education excellence at passnursing.com
+              Numbers that reflect our commitment to nursing education excellence at nursingexamcoach.com
             </p>
           </motion.div>
 
@@ -298,10 +298,10 @@ const About = () => {
           >
             <Quote className="h-16 w-16 text-accent mx-auto mb-6" />
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">
-              Ready to Start Your passnursing.com Journey?
+              Ready to Start Your nursingexamcoach.com Journey?
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Join hundreds of nursing students who have achieved their academic goals with passnursing.com
+              Join hundreds of nursing students who have achieved their academic goals with nursingexamcoach.com
               with our personalized support and expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

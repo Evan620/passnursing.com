@@ -85,7 +85,7 @@ const ServicesSection = () => {
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive academic support designed specifically for nursing students at passnursing.com. 
+            Comprehensive academic support designed specifically for nursing students at nursingexamcoach.com. 
             From exam preparation to assignment assistance, we're here to help you succeed.
           </p>
         </motion.div>

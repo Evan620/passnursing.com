@@ -22,7 +22,7 @@ const OnlineExamsHelp = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed"
           >
-            PassNursing.com is your dedicated partner in navigating the complexities of healthcare education, offering personalized support for academic success.
+            NursingExamCoach.com is your dedicated partner in navigating the complexities of healthcare education, offering personalized support for academic success.
           </motion.p>
         </div>
       </section>
@@ -38,13 +38,13 @@ const OnlineExamsHelp = () => {
             </div>
 
             <p className="text-gray-700 leading-relaxed">
-              Are you grappling with the challenges of an online class that seems insurmountable? Your search for a solution ends here, at PassNursing.com. We specialize in providing comprehensive assistance to manage your online course, ensuring not just timely submissions but also impressive grades in your assignments and exams. With our top-tier online class help services, you’ll experience a transformation in your academic journey, backed by the expertise of qualified subject matter experts.
+              Are you grappling with the challenges of an online class that seems insurmountable? Your search for a solution ends here, at NursingExamCoach.com. We specialize in providing comprehensive assistance to manage your online course, ensuring not just timely submissions but also impressive grades in your assignments and exams. With our top-tier online class help services, you’ll experience a transformation in your academic journey, backed by the expertise of qualified subject matter experts.
             </p>
 
             <h3 className="font-heading font-semibold text-xl text-gray-800">Unveiling Our Online Class Help Services: Your Path to Success</h3>
 
             <p className="text-gray-700 leading-relaxed">
-              At PassNursing.com, we understand the unique demands of remote learning and the complexities that come with it. Our mission is to navigate these challenges on your behalf, ensuring that your online class becomes a stepping stone to success rather than a source of frustration.
+              At NursingExamCoach.com, we understand the unique demands of remote learning and the complexities that come with it. Our mission is to navigate these challenges on your behalf, ensuring that your online class becomes a stepping stone to success rather than a source of frustration.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -110,15 +110,15 @@ const OnlineExamsHelp = () => {
             </div>
 
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6">
-              <h3 className="font-heading font-bold text-xl text-gray-800 mb-2">The PassNursing Difference: Your Partner in Success</h3>
+              <h3 className="font-heading font-bold text-xl text-gray-800 mb-2">The NursingExamCoach Difference: Your Partner in Success</h3>
               <p className="text-gray-700 leading-relaxed">
-                In a world where online education has become the norm, PassNursing.com stands as your reliable partner in conquering the challenges that come with it. Our comprehensive approach, expert guidance, and commitment to your success set us apart as the ideal choice for turning your online class into a remarkable achievement.
+                In a world where online education has become the norm, NursingExamCoach.com stands as your reliable partner in conquering the challenges that come with it. Our comprehensive approach, expert guidance, and commitment to your success set us apart as the ideal choice for turning your online class into a remarkable achievement.
               </p>
               <p className="text-gray-700 leading-relaxed mt-4">
                 We’ve witnessed students transform their academic trajectory with our assistance, embracing online classes with newfound confidence and emerging with impressive grades. As you navigate the landscape of remote learning, remember that you don’t have to face it alone. We are here to elevate your online class experience, helping you overcome obstacles and emerge victorious.
               </p>
               <p className="text-gray-700 leading-relaxed mt-4">
-                Your online class journey is about to take a positive turn. Welcome to PassNursing.com, where academic success in the world of online classes is no longer a distant dream but a tangible reality.
+                Your online class journey is about to take a positive turn. Welcome to NursingExamCoach.com, where academic success in the world of online classes is no longer a distant dream but a tangible reality.
               </p>
             </div>
 

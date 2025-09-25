@@ -22,7 +22,7 @@ const Hero = () => {
     }}>
 
     <div className="relative max-w-7xl mx-auto px-2 sm:px-6 lg:px-12 py-20 lg:py-32">
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-12 w-full">
+  <div className="flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-8 lg:gap-12 w-full">
 
           {/* Center Column - Content */}
           <motion.div
@@ -33,7 +33,7 @@ const Hero = () => {
           >
             <div className="space-y-4">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-center">
-                Ace Your Nursing Exams with <span className="text-accent">PassNursing.com</span>
+                Ace Your Nursing Exams with <span className="text-accent text-2xl md:text-3xl lg:text-4xl align-middle">NursingExamCoach.com</span>
               </h1>
             </div>
 
@@ -41,13 +41,14 @@ const Hero = () => {
             <div className="space-y-4">
               {/* Specialization List */}
               <div className="flex flex-col items-center">
-                <div className="font-extrabold text-2xl md:text-3xl mb-3 text-white tracking-wide drop-shadow-lg font-heading">We Specialize In</div>
+                <div className="font-extrabold text-2xl md:text-3xl mb-3 text-white tracking-wide drop-shadow-lg font-heading">We Specialize In Taking Your Nursing Exams</div>
                 <ul className="flex flex-wrap justify-center gap-2 md:gap-4">
-                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">Exam Tutoring</li>
-                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">Online Classes</li>
-                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">Proctored Exam Help</li>
-                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">Zoom Exam</li>
-                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">Homework Help</li>
+                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">HESI Exit Exam</li>
+                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">ATI TEAS</li>
+                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">Kaplan NCLEX Predictor</li>
+                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">BLS, ACLS, PALS Renewal Courses</li>
+                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">ANCC Practice/Prep Exams</li>
+                  <li className="bg-white/20 border border-white text-white rounded-full px-4 py-1 text-sm md:text-base font-semibold shadow-sm">NCLEX-RN/</li>
                 </ul>
               </div>
 
@@ -63,53 +64,17 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-service"
-                className="btn-accent inline-flex items-center justify-center space-x-2 text-lg px-8 py-4"
-              >
-                <span>Request a Service</span>
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="btn-secondary inline-flex items-center justify-center text-lg px-8 py-4"
-              >
-                Learn More
-              </Link>
-            </div>
-            <div className="grid grid-cols-3 gap-8 pt-8">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="flex justify-center mb-2">
-                      <Icon className="h-8 w-8 text-accent" />
-                    </div>
-                    <div className="font-heading font-bold text-2xl text-white">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm text-blue-200">{stat.label}</div>
-                  </motion.div>
-                );
-              })}
-            </div>
+            {/* Buttons and stats moved below image */}
           </motion.div>
 
-          {/* Right Column - Visual (original) */}
+          {/* Right Column - Visual and CTAs */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex-shrink-0 w-full max-w-md md:max-w-lg xl:max-w-xl 2xl:max-w-2xl"
+            className="relative flex-shrink-0 w-full max-w-md md:max-w-lg xl:max-w-xl 2xl:max-w-2xl flex flex-col items-center"
           >
-            <div className="relative z-10">
+            <div className="relative z-10 w-full">
               <div className="bg-white rounded-2xl shadow-2xl p-4 md:p-8 text-gray-800 flex items-center justify-center overflow-hidden">
                 <img 
                   src={rightCardImg}
@@ -139,6 +104,48 @@ const Hero = () => {
                   <div className="text-sm">Support</div>
                 </div>
               </motion.div>
+            </div>
+            {/* Buttons below image */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 w-full">
+              <a
+                href="https://wa.me/254707892164?text=Hello!%20I%20need%20help%20with%20my%20nursing%20studies."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent inline-flex items-center justify-center space-x-2 text-lg px-8 py-4"
+                aria-label="Chat with us on WhatsApp"
+              >
+                <span>Request a Service</span>
+                <ArrowRight className="h-5 w-5" />
+              </a>
+              <Link
+                to="/about"
+                className="btn-secondary inline-flex items-center justify-center text-lg px-8 py-4"
+              >
+                Learn More
+              </Link>
+            </div>
+            {/* Stats below buttons */}
+            <div className="grid grid-cols-3 gap-8 pt-8 w-full">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="flex justify-center mb-2">
+                      <Icon className="h-8 w-8 text-accent" />
+                    </div>
+                    <div className="font-heading font-bold text-2xl text-white">
+                      {stat.number}
+                    </div>
+                    <div className="text-sm text-blue-200">{stat.label}</div>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
