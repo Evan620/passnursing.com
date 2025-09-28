@@ -108,7 +108,7 @@ const Hero = () => {
             {/* Buttons below image */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 w-full">
               <a
-                href="https://wa.me/254707892164?text=Hello!%20I%20need%20help%20with%20my%20nursing%20studies."
+                href="https://wa.me/14802680707?text=Hello!%20I%20need%20help%20with%20my%20nursing%20studies."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-accent inline-flex items-center justify-center space-x-2 text-lg px-8 py-4"

@@ -49,7 +49,7 @@ const StyledLink = styled.a`
 
 const FloatingWhatsApp = () => {
   const [isVisible] = useState(true);
-  const phoneNumber = '+254707892164';
+  const phoneNumber = '+14802680707';
   const message = 'Hello! I need help with my nursing studies.';
   const [isHovered, setIsHovered] = useState(false);
 

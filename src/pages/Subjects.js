@@ -410,7 +410,7 @@ const Subjects = () => {
 
                     <div className="flex justify-between items-center mt-4">
                       <a
-                        href={`https://wa.me/254707892164?text=Hello! I need help with ${encodeURIComponent(subject.name)}.`}
+                        href={`https://wa.me/14802680707?text=Hello! I need help with ${encodeURIComponent(subject.name)}.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200"
