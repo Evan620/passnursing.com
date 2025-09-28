@@ -125,7 +125,7 @@ const Hero = () => {
               </Link>
             </div>
             {/* Stats below buttons */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-8 w-full justify-items-center">
+            <div className="grid grid-cols-3 gap-8 pt-8 w-full">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
