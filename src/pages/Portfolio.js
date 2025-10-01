@@ -191,7 +191,7 @@ const Portfolio = () => {
                     src={item.image}
                     alt={item.title}
                     onError={(e) => {
-                      console.error('Error loading image:', item.image);
+                      // Fallback to placeholder if image fails to load
                       e.target.src = images.placeholder;
                       e.target.onerror = null; // Prevent infinite loop if placeholder also fails
                     }}

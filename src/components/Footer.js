@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Stethoscope, Mail, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { CONTACT, SOCIAL_MEDIA, SITE_INFO, LOGO_SIZES } from '../config/constants';
 
 const Footer = () => {
   const quickLinks = [
@@ -14,9 +15,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
+    { name: 'Facebook', icon: Facebook, href: SOCIAL_MEDIA.facebook },
+    { name: 'Instagram', icon: Instagram, href: SOCIAL_MEDIA.instagram },
+    { name: 'LinkedIn', icon: Linkedin, href: SOCIAL_MEDIA.linkedin },
   ];
 
   return (
@@ -25,13 +26,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="bg-primary p-2 rounded-full">
-                <Stethoscope className="h-6 w-6 text-white" />
-              </div>
-              <span className="font-heading font-bold text-xl">
-                nursingexamcoach.com
-              </span>
+            <Link to="/" className="inline-block mb-6">
+              <img 
+                src="/nursing-exams-coach-high-resolution-logo-transparent.png" 
+                alt={`${SITE_INFO.name} Logo`}
+                className={`${LOGO_SIZES.footer} w-auto`}
+              />
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               Personalized academic support for nursing students. Expert guidance, 
@@ -64,19 +64,19 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary" />
                 <a
-                  href="mailto:info@nursingexamspro-s.com"
+                  href={`mailto:${CONTACT.email}`}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
                 >
-                  info@nursingexamspro-s.com
+                  {CONTACT.email}
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />
                 <a
-                  href="tel:+14802680707"
+                  href={`tel:${CONTACT.phone}`}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
                 >
-                  +1 480-268-0707
+                  {CONTACT.phone}
                 </a>
               </div>
             </div>
@@ -88,12 +88,16 @@ const Footer = () => {
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
+                // Only render if URL is not a placeholder
+                if (social.href === '#') return null;
                 return (
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-gray-700 hover:bg-primary p-2 rounded-full transition-colors duration-200"
-                    aria-label={social.name}
+                    aria-label={`Follow us on ${social.name}`}
                   >
                     <Icon className="h-5 w-5" />
                   </a>
@@ -107,7 +111,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Nursing Exams Pros – All Rights Reserved
+              {SITE_INFO.copyright}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link

@@ -11,6 +11,7 @@ const ContactFormPopup = ({ isOpen, onClose, subject = '' }) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,10 +24,11 @@ const ContactFormPopup = ({ isOpen, onClose, subject = '' }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
     
-    // Simulate form submission
+    // TODO: Replace with actual form submission logic (EmailJS, Formspree, or custom API)
     try {
-      // Replace with your actual form submission logic
+      // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1500));
       setIsSuccess(true);
       // Reset form after successful submission
@@ -40,8 +42,8 @@ const ContactFormPopup = ({ isOpen, onClose, subject = '' }) => {
         setIsSuccess(false);
         onClose();
       }, 2000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch (err) {
+      setError('Failed to submit form. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -92,6 +94,11 @@ const ContactFormPopup = ({ isOpen, onClose, subject = '' }) => {
 
             {!isSuccess ? (
               <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                    {error}
+                  </div>
+                )}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                     Full Name

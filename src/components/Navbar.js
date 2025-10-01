@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Stethoscope, User } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
+import { LOGO_SIZES } from '../config/constants';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,18 +20,25 @@ const Navbar = () => {
 
   return (
     <React.Fragment>
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
+
       {/* Desktop Navbar */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-primary p-2 rounded-full">
-                <Stethoscope className="h-6 w-6 text-white" />
-              </div>
-              <span className="font-heading font-bold text-xl text-gray-800">
-                NursingExamCoach.com
-              </span>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/nursing-exams-coach-high-resolution-logo-transparent.png" 
+                alt="NursingExamCoach.com - Expert Nursing Exam Help" 
+                className={`${LOGO_SIZES.navbar} w-auto`}
+              />
             </Link>
 
             {/* Desktop Navigation */}

@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import styled from 'styled-components';
+import { CONTACT } from '../config/constants';
 
 // Styled components to avoid boolean attribute warnings
 const StyledWhatsAppButton = styled.div`
   position: fixed;
   right: 25px;
-  bottom: 25px;
+  bottom: 90px;
   z-index: 9999;
+  
+  @media (min-width: 768px) {
+    bottom: 25px;
+  }
   width: 60px;
   height: 60px;
   background-color: #25D366;
@@ -49,8 +54,6 @@ const StyledLink = styled.a`
 
 const FloatingWhatsApp = () => {
   const [isVisible] = useState(true);
-  const phoneNumber = '+14802680707';
-  const message = 'Hello! I need help with my nursing studies.';
   const [isHovered, setIsHovered] = useState(false);
 
   // Clean up any existing style tags to prevent duplicates
@@ -91,7 +94,7 @@ const FloatingWhatsApp = () => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <StyledLink 
-          href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+          href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(CONTACT.whatsappMessage)}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"

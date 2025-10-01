@@ -1,0 +1,21 @@
+{
+  "short_name": "NursingExamCoach",
+  "name": "NursingExamCoach.com - Expert Nursing Exam Help",
+  "icons": [
+    {
+      "src": "nursing-exams-coach-high-resolution-logo-transparent.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "nursing-exams-coach-high-resolution-logo-transparent.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#007BFF",
+  "background_color": "#F9FAFB",
+  "description": "Comprehensive academic support designed specifically for nursing students. Expert guidance for exams, assignments, and nursing education success."
+}
